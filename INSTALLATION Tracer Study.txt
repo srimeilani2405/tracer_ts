@@ -1,0 +1,60 @@
+
+=== TRACER STUDY INSTALLATION GUIDE ===
+
+🧩 VERSI XAMPP YANG DIGUNAKAN
+- XAMPP 8.1.25
+- XAMPP 8.2.12
+
+1. Ekstrak file ZIP
+   - File: tracer_ts_terbaru (1).zip
+   - Ekstrak ke folder htdocs atau ke direktori public server lokal kamu
+
+2. Setup Database
+   - Buka phpMyAdmin
+   - Buat database baru dengan nama: tracer_ts
+   - Import file database
+
+3. Konfigurasi Koneksi Database
+   - Buka file: app/Config/Database.php
+   - Ubah konfigurasi berikut:
+     ------------------------------
+     public $default = [
+         'hostname' => 'localhost',
+         'username' => 'root',
+         'password' => '',
+         'database' => 'tracer_ts',
+         ...
+     ];
+     ------------------------------
+
+4. Jalankan Project
+   - Buka browser dan akses: http://localhost:8080
+
+5. Login ke Dashboard (Admin)
+   - Username: admin
+   - Password: password
+
+6. Login ke Dashboard (site admin)
+   - Bisa buat akun site admin terlebih dahulu melalui Admin Panel > Fitur Pengguna
+   - Atau gunakan akun default berikut:
+     - Username: siteadmin1
+     - Password: siteadmin
+     catatan: admin dan site admin masuknya sama ke dashboard admin
+
+7. Login ke Dashboard (Alumni)
+   - Bisa buat akun alumni terlebih dahulu melalui Admin Panel > Fitur Pengguna
+   - Atau gunakan akun default berikut:
+     - Username: alumni1
+     - Password: alumni123
+
+8. Login ke Dashboard (Admin Jurusan)
+   - Bisa buat akun admin jurusan terlebih dahulu melalui Admin Panel > Fitur Pengguna
+   - Atau gunakan akun default berikut:
+     - Username: adminjurusan1
+     - Password: adminjurusan123
+
+Catatan:
+- Pastikan XAMPP atau server lokal kamu sudah aktif (Apache dan MySQL nyala)
+- Jika error 404, cek file .htaccess dan konfigurasi baseURL di app/Config/App.php
+
+=== SEMOGA BERHASIL ===
